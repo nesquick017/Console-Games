@@ -12,6 +12,9 @@
   "license": "ISC",
   "type": "module",
   "dependencies": {
+    "eslint": "^8.37.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.27.5",
     "lodash": "^4.17.21",
     "readline-sync": "^1.4.10"
   }
