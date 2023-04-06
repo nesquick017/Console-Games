@@ -3,7 +3,7 @@ import readlineSync from "readline-sync";
 import { getName } from "../src/cli.js";
 
 const gamerName = getName();
-let corAnswer = 0;
+let corCounter = 0;
 let i = 0;
 
 console.log("Welcome to the Brain Games!");
@@ -13,24 +13,28 @@ for (i = 0; i < 3; i += 1) {
   console.log("Question : ", numIs);
   const gamerAnswer = readlineSync.question("Your answer : ");
   if (numIs % 2 === 0) {
-    if (gamerAnswer !== "yes") {
+    const correctAnswer = "yes";
+    if (gamerAnswer === correctAnswer) {
+      console.log("Correct!");
+    } else {
       console.log(
         `'${gamerAnswer}' ${"is a wrong answer ;(. Correct answer was"} ${"'yes'"}\n${"Let"}'${"s try again"}, ${gamerName}`
       );
       break;
-    } else {
-      console.log(`${"Correct!"}`);
     }
-  } else if (gamerAnswer !== "no") {
-    console.log(
-      `'${gamerAnswer}' ${"is a wrong answer ;(. Correct answer was"} ${"'no'"}\n${"Let"}'${"s try again"}, ${gamerName}`
-    );
-    break;
   } else {
-    console.log(`${"Correct!"}`);
+    const correctAnswer = "no";
+    if (gamerAnswer === correctAnswer) {
+      console.log("Correct!");
+    } else {
+      console.log(
+        `'${gamerAnswer}' ${"is a wrong answer ;(. Correct answer was"} ${"'no'"}\n${"Let"}'${"s try again"}, ${gamerName}`
+      );
+      break;
+    }
   }
-  corAnswer += 1;
+  corCounter += 1;
 }
-corAnswer === 3
+corCounter === 3
   ? console.log(`${"Congratulations"}, ${gamerName} ${"!"}`)
   : null;
