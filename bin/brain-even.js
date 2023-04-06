@@ -2,11 +2,12 @@
 import readlineSync from "readline-sync";
 import { getName } from "../src/cli.js";
 
-console.log("Welcome to the Brain Games!");
 const gamerName = getName();
-console.log('Answer "yes" if the number is even, otherwise answer "no"');
+let corAnswer = 0;
 let i = 0;
-let correctCounter = 0;
+
+console.log("Welcome to the Brain Games!");
+console.log('Answer "yes" if the number is even, otherwise answer "no"');
 for (i = 0; i < 3; i += 1) {
   const numIs = Math.round(Math.random() * 100);
   console.log("Question : ", numIs);
@@ -28,8 +29,8 @@ for (i = 0; i < 3; i += 1) {
   } else {
     console.log(`${"Correct!"}`);
   }
-  correctCounter += 1;
+  corAnswer += 1;
 }
-if (correctCounter === 3) {
-  console.log(`${"Congratulations"}, ${gamerName} ${"!"}`);
-}
+corAnswer === 3
+  ? console.log(`${"Congratulations"}, ${gamerName} ${"!"}`)
+  : null;
