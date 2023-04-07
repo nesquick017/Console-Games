@@ -2,14 +2,14 @@
 /* eslint-disable no-unused-expressions */
 import readlineSync from "readline-sync";
 import { getName } from "../src/cli.js";
-import { compareAnswer } from "./logic.js";
+import { compareAnswer } from "../src/index.js";
 
-const gamerName = getName();
 let i = 0;
 let correctAnswer = "";
 let correctRound = 0;
 
 console.log("Welcome to the Brain Games!");
+const gamerName = getName();
 console.log('Answer "yes" if the number is even, otherwise answer "no"');
 for (i = 0; i < 3; i += 1) {
   const numIs = Math.round(Math.random() * 100);
@@ -25,4 +25,4 @@ for (i = 0; i < 3; i += 1) {
   if (!resultOfAnswer) break;
   correctRound += 1;
 }
-if (correctRound === 3) console.log("Congratulations !");
+if (correctRound === 3) console.log("Congratulations", gamerName, '!');
