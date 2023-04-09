@@ -2,7 +2,7 @@
 
 import readlineSync from "readline-sync";
 import { getName } from "../src/cli.js";
-import { compareAnswer, NOD } from "../src/index.js";
+import { compareAnswer, NOD, getAllert } from "../src/index.js";
 
 let i = 0;
 let gamerName = "";
@@ -17,13 +17,13 @@ for (i = 0; i < 3; i += 1) {
   console.log("Question : ", numberOne, numberTwo);
   const correctAnswer = NOD(numberOne, numberTwo);
   const gamerAnswer = readlineSync.question("Your answer : ");
-  const alertWrongAnswer = `'${gamerAnswer}' ${"is a wrong answer ;(. Correct answer was"} '${correctAnswer}'\n${"Let's try again"}, ${gamerName}`;
-  const resultOfAnswer = compareAnswer(
+  const allertToGamer = getAllert(gamerAnswer, gamerName, correctAnswer)
+  const result = compareAnswer(
     correctAnswer,
     gamerAnswer,
-    alertWrongAnswer
+    allertToGamer
   );
-  if (!resultOfAnswer) break;
+  if (!result) break;
   correctRound += 1;
 }
-correctRound > 2 ? console.log("Congratulations, ", gamerName, "!") : null;
+if (correctRound === 3) console.log("Congratulations", gamerName, '!');

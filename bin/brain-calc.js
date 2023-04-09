@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import readlineSync from "readline-sync";
 import { getName } from "../src/cli.js";
-import { compareAnswer , calc, } from "../src/index.js";
+import { compareAnswer , calc, getAllert } from "../src/index.js";
 
 const operations = ["-", "+", "/", "*"];
 let i = 0;
@@ -21,13 +21,13 @@ for (i = 0; i < 3; i += 1) {
   console.log("Question : ", numOne, getOperation, numTwo);
   const correctAnswer =  doOperation;
   const gamerAnswer = readlineSync.question("Your answer : ");
-  const alertWrongAnswer = `'${gamerAnswer}' ${"is a wrong answer ;(. Correct answer was"} '${correctAnswer}'\n${"Let's try again"}, ${gamerName}`;
-  const resultOfAnswer = compareAnswer(
+  const allertToGamer = getAllert(gamerAnswer, gamerName, correctAnswer)
+  const result = compareAnswer(
     correctAnswer,
     gamerAnswer,
-    alertWrongAnswer
+    allertToGamer
   );
-  if (!resultOfAnswer) break;
+  if (!result) break;
   correctRound += 1;
 }
 if (correctRound === 3) console.log("Congratulations", gamerName, '!');

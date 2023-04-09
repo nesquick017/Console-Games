@@ -1,4 +1,6 @@
 /* eslint-disable import/prefer-default-export */
+//below the function to compare answer and to display the right one or to display the alert to wrong answer.
+
 export function compareAnswer(correctAnswer, gamerAnswer, sampleToAnswer) {
   if (correctAnswer == gamerAnswer) {
     console.log("Correct!");
@@ -7,6 +9,7 @@ export function compareAnswer(correctAnswer, gamerAnswer, sampleToAnswer) {
   console.log(sampleToAnswer);
   return 0;
 }
+//below the calculator to get the right answer for brain-calc.
 
 export function calc(a, operation, b) {
   let result = 0;
@@ -24,6 +27,7 @@ export function calc(a, operation, b) {
   }
   return result;
 }
+// below the function to find NOD for 2 numbers 
 
 export function NOD(numberOne, numberTwo) {
   let i = 0;
@@ -39,3 +43,11 @@ export function NOD(numberOne, numberTwo) {
   }
   return isNodeBoth;
 }
+
+//below the function to build the allert
+
+export function getAllert(gamerAnswer, gamerName, correctAnswer,){
+  const alertWrongAnswer = `'${gamerAnswer}' ${"is a wrong answer ;(. Correct answer was"} '${correctAnswer}'\n${"Let's try again"}, ${gamerName}`;
+  return alertWrongAnswer;
+}
+
