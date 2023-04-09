@@ -15,10 +15,10 @@ console.log('* For "*" operations use number without "," or "."')
 for (i = 0; i < 3; i += 1) {
   const numberOperation = Math.floor(Math.random() * operations.length);
   const getOperation = operations[numberOperation]
-  const a = Math.floor(Math.random() * 100);
-  const b = Math.floor(Math.random() * 100);
-  const doOperation = calc(a, getOperation, b)
-  console.log("Question : ", a, getOperation, b);
+  const numOne = Math.floor(Math.random() * 100);
+  const numTwo = Math.floor(Math.random() * 100);
+  const doOperation = calc(numOne, getOperation, numTwo)
+  console.log("Question : ", numOne, getOperation, numTwo);
   const correctAnswer =  doOperation;
   const gamerAnswer = readlineSync.question("Your answer : ");
   const alertWrongAnswer = `'${gamerAnswer}' ${"is a wrong answer ;(. Correct answer was"} '${correctAnswer}'\n${"Let's try again"}, ${gamerName}`;
