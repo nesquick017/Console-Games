@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 
-import readlineSync from "readline-sync";
 import { getName } from "../src/cli.js";
 import { compareAnswer, NOD, getAllert, questionAnswer } from "../src/index.js";
 

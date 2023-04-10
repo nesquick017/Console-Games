@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 /* eslint-disable no-unused-expressions */
-import readlineSync from "readline-sync";
 import { getName } from "../src/cli.js";
 import { compareAnswer, getAllert, questionAnswer } from "../src/index.js";
 

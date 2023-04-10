@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-import readlineSync from "readline-sync";
 import { getName } from "../src/cli.js";
 import { compareAnswer, getAllert, questionAnswer } from "../src/index.js";
 
@@ -15,7 +14,6 @@ for (i = 0; i < 3; i += 1) {
   const firstElement = Math.floor(Math.random() * 10);
   const indexToSkip = Math.floor(Math.random() * 10);
   let k = 0;
-  const progressionLength = Math.floor(Math.random() * 10)
   for (k = 0; k < 10; k += 1) {
     nextItem += firstElement;
     if (k !== indexToSkip) progression.push(nextItem);

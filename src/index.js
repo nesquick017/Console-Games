@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-expressions */
 /* eslint-disable eqeqeq */
 /* eslint-disable import/prefer-default-export */
-// below the function to compare answer and to display the right one or to display the alert to wrong answer.
+// below the function to compare answer.
 
 import readlineSync from "readline-sync";
 
