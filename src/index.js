@@ -3,11 +3,11 @@
 /* eslint-disable import/prefer-default-export */
 // below the function to compare answer.
 
-import readlineSync from "readline-sync";
+import readlineSync from 'readline-sync';
 
 export function compareAnswer(correctAnswer, gamerAnswer, sampleToAnswer) {
   if (correctAnswer == gamerAnswer) {
-    console.log("Correct!");
+    console.log('Correct!');
     return 1;
   }
   console.log(sampleToAnswer);
@@ -17,16 +17,16 @@ export function compareAnswer(correctAnswer, gamerAnswer, sampleToAnswer) {
 
 export function calc(a, operation, b) {
   let result = 0;
-  if (operation === "-") {
+  if (operation === '-') {
     result = a - b;
   }
-  if (operation === "+") {
+  if (operation === '+') {
     result = a + b;
   }
-  if (operation === "*") {
+  if (operation === '*') {
     result = a * b;
   }
-  if (operation === "/") {
+  if (operation === '/') {
     result = Math.floor(a / b);
   }
   return result;
@@ -51,7 +51,7 @@ export function NOD(numberOne, numberTwo) {
 // below the function to build the allert
 
 export function getAllert(gamerAnswer, gamerName, correctAnswer) {
-  const alertWrongAnswer = `'${gamerAnswer}' ${"is a wrong answer ;(. Correct answer was"} '${correctAnswer}'\n${"Let's try again"}, ${gamerName}${"!"}`;
+  const alertWrongAnswer = `'${gamerAnswer}' ${'is a wrong answer ;(. Correct answer was'} '${correctAnswer}'\n${"Let's try again"}, ${gamerName}${'!'}`;
   return alertWrongAnswer;
 }
 
@@ -71,7 +71,7 @@ export function testPrime(num) {
 }
 
 export function questionAnswer(num) {
-  console.log("Question:", num);
-  const gamerAnswer = readlineSync.question("Your answer: ");
+  console.log('Question:', num);
+  const gamerAnswer = readlineSync.question('Your answer: ');
   return gamerAnswer;
 }
