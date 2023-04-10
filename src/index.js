@@ -51,7 +51,7 @@ export function NOD(numberOne, numberTwo) {
 // below the function to build the allert
 
 export function getAllert(gamerAnswer, gamerName, correctAnswer) {
-  const alertWrongAnswer = `'${gamerAnswer}' ${"is a wrong answer ;(. Correct answer was"} '${correctAnswer}'\n${"Let's try again"}, ${gamerName}`;
+  const alertWrongAnswer = `'${gamerAnswer}' ${"is a wrong answer ;(. Correct answer was"} '${correctAnswer}'\n${"Let's try again"}, ${gamerName}${"!"}`;
   return alertWrongAnswer;
 }
 
