@@ -20,7 +20,7 @@ for (i = 0; i < 3; i += 1) {
     nextItem += firstElement;
     if (k !== indexToSkip) progression.push(nextItem);
     if (k === indexToSkip) {
-      progression.push("...");
+      progression.push("..");
       skippedItem = nextItem;
     }
   }
