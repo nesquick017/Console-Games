@@ -34,4 +34,4 @@ for (i = 0; i < 3; i += 1) {
   myProgression = [];
   progression = [];
 }
-if (correctRound === 3) console.log("Congratulations,", gamerName, "!");
+if (correctRound === 3) console.log("Congratulations,", gamerName,"!");
