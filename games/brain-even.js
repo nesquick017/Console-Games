@@ -10,7 +10,7 @@ let correctRound = 0;
 
 console.log("Welcome to the Brain Games!");
 const gamerName = getName();
-console.log('Answer "yes" if number is even, otherwise answer "no"');
+console.log('Answer "yes" if number is even, otherwise answer "no".');
 for (i = 0; i < 3; i += 1) {
   const numIs = Math.round(Math.random() * 100);
   const gamerAnswer = questionAnswer(numIs);
