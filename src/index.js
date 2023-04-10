@@ -72,6 +72,6 @@ export function testPrime(num) {
 
 export function questionAnswer(num) {
   console.log("Question:", num);
-  const gamerAnswer = readlineSync.question("Your answer : ");
+  const gamerAnswer = readlineSync.question("Your answer: ");
   return gamerAnswer;
 }
