@@ -8,17 +8,13 @@ import {
   questionAnswer,
 } from "../src/index.js";
 
-const operations = ["-", "+", "/", "*"];
+const operations = ["-", "+", "*"];
 let i = 0;
 let correctRound = 0;
 
 console.log("Welcome to the Brain Games!");
 const gamerName = getName();
-console.log("What is result of expression ?");
-console.log(
-  '* For "/" operations always round the argument down to the nearest lower integer.'
-);
-console.log('* For "*" operations use number without "," or "."');
+console.log("What is result of the expression ?");
 for (i = 0; i < 3; i += 1) {
   const numberOperation = Math.floor(Math.random() * operations.length);
   const getOperation = operations[numberOperation];
