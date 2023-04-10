@@ -14,7 +14,7 @@ let correctRound = 0;
 
 console.log("Welcome to the Brain Games!");
 const gamerName = getName();
-console.log("What is result of the expression ?");
+console.log("What is result of the expression?");
 for (i = 0; i < 3; i += 1) {
   const numberOperation = Math.floor(Math.random() * operations.length);
   const getOperation = operations[numberOperation];
@@ -29,4 +29,4 @@ for (i = 0; i < 3; i += 1) {
   if (!result) break;
   correctRound += 1;
 }
-if (correctRound === 3) console.log("Congratulations", gamerName,"!");
+if (correctRound === 3) console.log("Congratulations", gamerName, "!");
