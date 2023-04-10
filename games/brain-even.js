@@ -20,4 +20,4 @@ for (i = 0; i < 3; i += 1) {
   if (!result) break;
   correctRound += 1;
 }
-if (correctRound === 3) console.log("Congratulations,",gamerName,"!");
+if (correctRound === 3) console.log(`${"Congratulations,"} ${gamerName}${"!"}`);
