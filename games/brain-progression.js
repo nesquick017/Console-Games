@@ -5,7 +5,7 @@ import { compareAnswer, getAllert, questionAnswer } from "../src/index.js";
 
 console.log("Welcome to the Brain Games!");
 const gamerName = getName();
-console.log("What number is missing in the progression ?");
+console.log("What number is missing in the progression?");
 let progression = [];
 let nextItem = 0;
 let skippedItem = 0;
@@ -34,4 +34,4 @@ for (i = 0; i < 3; i += 1) {
   myProgression = [];
   progression = [];
 }
-if (correctRound === 3) console.log("Congratulations,", gamerName,"!");
+if (correctRound === 3) console.log(`${"Congratulations,"} ${gamerName}${"!"}`);
