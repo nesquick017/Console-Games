@@ -3,6 +3,7 @@ import readlineSync from "readline-sync";
 import { getName } from "../src/cli.js";
 import { compareAnswer, getAllert } from "../src/index.js";
 
+console.log("Welcome to the Brain Games!");
 const gamerName = getName();
 console.log("What number is missing in the progression ?");
 let progression = [];

@@ -8,6 +8,7 @@ let i = 0;
 let correctAnswer = "";
 let correctRound = 0;
 
+console.log("Welcome to the Brain Games!");
 const gamerName = getName();
 console.log('Answer "yes" if the number is even, otherwise answer "no"');
 for (i = 0; i < 3; i += 1) {

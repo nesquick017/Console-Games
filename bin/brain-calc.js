@@ -12,6 +12,7 @@ const operations = ["-", "+", "/", "*"];
 let i = 0;
 let correctRound = 0;
 
+console.log("Welcome to the Brain Games!");
 const gamerName = getName();
 console.log("What is result of expression ?");
 console.log(

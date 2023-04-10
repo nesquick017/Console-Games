@@ -8,6 +8,7 @@ let i = 0;
 let gamerName = "";
 let correctRound = 0;
 
+console.log("Welcome to the Brain Games!");
 gamerName = getName();
 console.log("Find the greatest common divisor of given numbers.");
 for (i = 0; i < 3; i += 1) {

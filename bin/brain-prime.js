@@ -13,6 +13,7 @@ import {
 let i = 0;
 let correctRound = 0;
 
+console.log("Welcome to the Brain Games!");
 const gamerName = getName();
 console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
 for (i = 0; i < 3; i += 1) {
