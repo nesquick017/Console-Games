@@ -1,7 +1,8 @@
 # Welcome to my **MATH-BRAIN-GAMES** the place of logic and fun !
 
-### This is the instruction to lounch my games ! 
-
+### This is the instruction *how to run* my games ! 
+**Check the descriptions below and choose which one do you want to play, then put the chosen name to terminal and enjoy 8-)** \
+\
 **The game 1 : brain-calc, you have to find the solution for expression, answer strictly 'yes' or 'no' this is crucial for the tests.** \
 **The game 2 : brain-even, you have to answer 'yes' if given number is even, 'no' if not. Please, nswer stricly this is crucial.** \
 **The game 3 : brain-gcd, you have to find the greatest common divisor of given numbers, put the correct number to your answer.** \
