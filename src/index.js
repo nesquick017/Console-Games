@@ -58,7 +58,7 @@ export function getAllert(gamerAnswer, gamerName, correctAnswer) {
 // below logick to prime numbers
 
 export function testPrime(num) {
-  if (num === 1) return false;
+  if (num === 1 || num === 0) return false;
   let i = 0;
   let splitter = 1;
   while (i < num) {
