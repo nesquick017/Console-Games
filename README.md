@@ -1,7 +1,9 @@
 # Welcome to my **MATH-BRAIN-GAMES** the place of logic and fun !
 
-### This is the instruction *how to run* my games ! 
-**Check the descriptions below and choose which one do you want to play, then put the chosen name to terminal and enjoy 8-)** \
+### This is the instruction *how to run* my games !
+Step one : install package via ``` npm install @hexlet/code@1.0.0 ```
+\
+Step two : check the descriptions below and choose which one do you want to play, then put the chosen name to terminal and enjoy 8-)** \
 \
 **The game 1 : brain-calc, you have to find the solution for expression.** \
 **The game 2 : brain-even, you have to answer 'yes' if given number is even, 'no' if not. Please, nswer stricly this is crucial.** \
