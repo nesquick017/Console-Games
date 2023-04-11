@@ -15,8 +15,3 @@
 //         }
 //     ]
 // }
-
-const operations = [
-    '-', '+', '/', '*'
-]
-console.log(operations[1])
