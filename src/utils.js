@@ -2,10 +2,6 @@ export function getRandomMath(min, max) {
   const num = Math.floor(min + Math.random() * (max - Math.random() - min));
   return num;
 }
-export function testIsEven(num) {
-  const result = num % 2 === 0;
-  return result;
-}
 export function getMyProgression() {
   let i = 0;
   const myProgression = [];

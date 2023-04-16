@@ -1,6 +1,3 @@
-// import {
-//   getAnswer, giveQuestion, makeCompare, getAllert,
-// } from '../index.js';
 import { getRandomMath } from '../utils.js';
 
 export const explanationToCalc = 'What is the result of the expression?';
