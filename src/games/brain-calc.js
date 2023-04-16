@@ -3,7 +3,7 @@
 // } from '../index.js';
 import { getRandomMath } from '../utils.js';
 
-export const explanation = 'What is the result of the expression?';
+export const explanationToCalc = 'What is the result of the expression?';
 
 function getOperation() {
   const operations = ['-', '+', '*'];

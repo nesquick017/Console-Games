@@ -16,9 +16,10 @@ export function getAllert(gamerAnswer, gamerName, correctAnswer) {
   const alertWrongAnswer = `'${gamerAnswer}' is a wrong answer ;(. Correct answer was '${correctAnswer}'\nLet's try again, ${gamerName}!`;
   return alertWrongAnswer;
 }
-export function playGame(gameNameFunc) {
+export function playGame(gameNameFunc, explanationToGame) {
   console.log('Welcome to the Brain Games!');
   const gamerName = getName();
+  console.log(explanationToGame);
   let i = 0;
   for (i = 0; i < 3; i += 1) {
     const [questionToGamer, correctAnswer] = gameNameFunc();
