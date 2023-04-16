@@ -3,7 +3,7 @@ export function getRandomMath(min, max) {
   return num;
 }
 export function isEven(num) {
-  const result = (num % 2 === 0);
+  const result = num % 2 === 0;
   return result;
 }
 export function getProgression() {
@@ -50,4 +50,15 @@ export function testPrime(num) {
   }
   result = splitter < 3;
   return result;
+}
+export function getGCD(numOne, numTwo) {
+  let i = 0;
+  let isNodeBoth = 0;
+  const smallestOne = numOne < numTwo ? numOne : numTwo;
+  for (i = 0; i <= smallestOne; i += 1) {
+    if (numOne % i === 0 && numTwo % i === 0) {
+      isNodeBoth = i;
+    }
+  }
+  return isNodeBoth;
 }

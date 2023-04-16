@@ -1,6 +1,6 @@
-import {
-  getAnswer, giveQuestion, makeCompare, getAllert,
-} from '../index.js';
+// import {
+//   getAnswer, giveQuestion, makeCompare, getAllert,
+// } from '../index.js';
 import { getRandomMath } from '../utils.js';
 
 export const explanation = 'What is the result of the expression?';
@@ -42,23 +42,11 @@ function doCalc(a, operation, b) {
   return `${result}`;
 }
 
-export function brainCalc(gamerName) {
-  let correctRound = 0;
+export function brainCalc() {
   const num1 = getRandomMath(0, 100);
   const num2 = getRandomMath(0, 100);
   const operation = getOperation();
   const question = getExpression(num1, operation, num2);
-  giveQuestion(question);
-  const correctAnser = doCalc(num1, operation, num2);
-  const gamerAnswer = getAnswer();
-  const result = makeCompare(gamerAnswer, correctAnser);
-  const wrongResult = getAllert(gamerAnswer, gamerName, correctAnser);
-  if (result) {
-    console.log('Correct!');
-    correctRound = true;
-    return correctRound;
-  }
-  console.log(wrongResult);
-  correctRound = false;
-  return correctRound;
+  const correctAnswer = doCalc(num1, operation, num2);
+  return [question, correctAnswer];
 }

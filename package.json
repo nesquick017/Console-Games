@@ -1,7 +1,7 @@
 {
   "name": "@hexlet/code",
   "version": "1.0.0",
-"description":  "This is a collection of games, where you have to give 3 correct answer in a row in chosen game to pass it."
+"description":  "This is a collection of games, where you have to give 3 correct answer in a row in chosen game to pass it.",
   "bin": {
     "brain-games": "bin/brain-games.js",
     "brain-even": "bin/brain-even.js",

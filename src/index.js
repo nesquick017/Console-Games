@@ -1,7 +1,8 @@
 import readlineSync from 'readline-sync';
+import getName from './cli.js';
 
-export function giveQuestion(question) {
-  console.log('Question:', question);
+export function giveQuestion(questionToGamer) {
+  console.log('Question:', questionToGamer);
 }
 export function getAnswer() {
   const gamerAnswer = readlineSync.question('Your answer: ');
@@ -15,15 +16,21 @@ export function getAllert(gamerAnswer, gamerName, correctAnswer) {
   const alertWrongAnswer = `'${gamerAnswer}' is a wrong answer ;(. Correct answer was '${correctAnswer}'\nLet's try again, ${gamerName}!`;
   return alertWrongAnswer;
 }
-
-export function getGCD(numOne, numTwo) {
+export function playGame(gameNameFunc) {
+  console.log('Welcome to the Brain Games!');
+  const gamerName = getName();
   let i = 0;
-  let isNodeBoth = 0;
-  const smallestOne = numOne < numTwo ? numOne : numTwo;
-  for (i = 0; i <= smallestOne; i += 1) {
-    if (numOne % i === 0 && numTwo % i === 0) {
-      isNodeBoth = i;
+  for (i = 0; i < 3; i += 1) {
+    const [questionToGamer, correctAnswer] = gameNameFunc();
+    giveQuestion(questionToGamer);
+    const gamerAnswer = getAnswer();
+    const isCorrect = makeCompare(gamerAnswer, correctAnswer);
+    const allert = getAllert(gamerAnswer, gamerName, correctAnswer);
+    if (!isCorrect) {
+      console.log(allert);
+      break;
     }
+    console.log('Correct!');
+    if (i === 2) console.log(`Congratulations, ${gamerName}!`);
   }
-  return isNodeBoth;
 }
