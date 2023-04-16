@@ -1,4 +1,4 @@
-import { getRandomMath } from '../utils.js';
+import getRandomMath from '../utils.js';
 
 export const explanationToGCD = 'Find the greatest common divisor of given numbers.';
 

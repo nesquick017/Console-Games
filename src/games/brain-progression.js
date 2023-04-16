@@ -1,35 +1,47 @@
-// #!/usr/bin/env node
-// // import { getName } from '../cli.js';
-// // import { compareAnswer, getAllert, questionAnswer } from '../index.js';
+import getRandomMath from '../utils.js';
 
-// console.log('Welcome to the Brain Games!');
-// const gamerName = getName();
-// console.log('What number is missing in the progression?');
-// let progression = [];
-// let nextItem = 0;
-// let skippedItem = 0;
-// let correctRound = 0;
-// let i = 0;
-// for (i = 0; i < 3; i += 1) {
-//   const firstElement = Math.floor(Math.random() * 10);
-//   const indexToSkip = Math.floor(Math.random() * 10);
-//   let k = 0;
-//   for (k = 0; k < 10; k += 1) {
-//     nextItem += firstElement;
-//     if (k !== indexToSkip) progression.push(nextItem);
-//     if (k === indexToSkip) {
-//       progression.push('..');
-//       skippedItem = nextItem;
-//     }
-//   }
-//   let myProgression = progression.join(' ');
-//   const correctAnswer = skippedItem;
-//   const gamerAnswer = questionAnswer(myProgression);
-//   const allertToGamer = getAllert(gamerAnswer, gamerName, correctAnswer);
-//   const result = compareAnswer(correctAnswer, gamerAnswer, allertToGamer);
-//   if (!result) break;
-//   correctRound += 1;
-//   myProgression = [];
-//   progression = [];
-// }
-// if (correctRound === 3) console.log(`${'Congratulations,'} ${gamerName}${'!'}`);
+function getMyProgression() {
+  let i = 0;
+  const myProgression = [];
+  const element = getRandomMath(1, 100);
+  let nextElement = 0;
+  const progressionLength = getRandomMath(5, 10);
+  while (i < progressionLength) {
+    if (element !== 0) {
+      nextElement += element;
+      myProgression.push(nextElement);
+      i += 1;
+    } else {
+      nextElement += 1;
+      myProgression.push(nextElement);
+      i += 1;
+    }
+  }
+  return myProgression;
+}
+function getItemOfProgression(progression) {
+  const isLength = progression.length;
+  const indexToSkip = getRandomMath(0, isLength);
+  const itemToSkip = progression[indexToSkip];
+  return itemToSkip;
+}
+function insertItemInProgression(progression, itemToSkip) {
+  let result = progression;
+  const index = progression.indexOf(itemToSkip);
+  const replacement = '..';
+  result[index] = replacement;
+  result = progression.join(' ');
+  return result;
+}
+export const explanationToProgression = 'What number is missing in the progression?';
+export function brainProgression() {
+  const myProgression = getMyProgression();
+  const insertedItemOfProgression = getItemOfProgression(myProgression);
+  const finalProgression = insertItemInProgression(
+    myProgression,
+    insertedItemOfProgression,
+  );
+  const question = finalProgression;
+  const correctAnswer = `${insertedItemOfProgression}`;
+  return [question, correctAnswer];
+}

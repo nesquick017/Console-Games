@@ -1,4 +1,4 @@
-import { getRandomMath } from '../utils.js';
+import getRandomMath from '../utils.js';
 
 export const explanationToEven = 'Answer "yes" if the number is even, otherwise answer "no".';
 function testIsEven(num) {

@@ -1,26 +1,22 @@
-// import readlineSync from 'readline-sync';
-// import { getName } from '../src/cli.js';
-// import {
-//   compareAnswer,
-//   getAllert,
-//   testPrime,
-//   questionAnswer,
-// } from '../src/index.js';
+import getRandomMath from '../utils.js';
 
-// let i = 0;
-// let correctRound = 0;
+function testIsPrime(num) {
+  let result = '';
+  if (num === 1 || num === 0) return false;
+  let i = 0;
+  let splitter = 1;
+  while (i < num) {
+    if (num % i === 0) splitter += 1;
+    i += 1;
+  }
+  result = splitter < 3;
+  return result;
+}
 
-// console.log('Welcome to the Brain Games!');
-// const gamerName = getName();
-// console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
-// for (i = 0; i < 3; i += 1) {
-//   let correctAnswer = '';
-//   const num = Math.floor(Math.random() * 100);
-//   testPrime(num) === true ? (correctAnswer = 'yes') : (correctAnswer = 'no');
-//   const gamerAnswer = questionAnswer(num);
-//   const allertToGamer = getAllert(gamerAnswer, gamerName, correctAnswer);
-//   const result = compareAnswer(gamerAnswer, correctAnswer, allertToGamer);
-//   if (!result) break;
-//   correctRound += 1;
-// }
-// if (correctRound === 3) console.log(`${'Congratulations,'} ${gamerName}${'!'}`);
+export const explanationToPrime = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+export function brainPrime() {
+  const myNum = getRandomMath(0, 1000);
+  const question = myNum;
+  const correctAnswer = testIsPrime(myNum) ? 'yes' : 'no';
+  return [question, correctAnswer];
+}
