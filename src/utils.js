@@ -2,11 +2,11 @@ export function getRandomMath(min, max) {
   const num = Math.floor(min + Math.random() * (max - Math.random() - min));
   return num;
 }
-export function isEven(num) {
+export function testIsEven(num) {
   const result = num % 2 === 0;
   return result;
 }
-export function getProgression() {
+export function getMyProgression() {
   let i = 0;
   const myProgression = [];
   const element = getRandomMath(1, 100);
@@ -25,13 +25,13 @@ export function getProgression() {
   }
   return myProgression;
 }
-export function getItem(progression) {
+export function getItemOfProgression(progression) {
   const isLength = progression.length;
   const indexToSkip = getRandomMath(0, isLength);
   const itemToSkip = progression[indexToSkip];
   return itemToSkip;
 }
-export function insertItem(progression, itemToSkip) {
+export function insertItemInProgression(progression, itemToSkip) {
   let result = progression;
   const index = progression.indexOf(itemToSkip);
   const replacement = '..';
@@ -39,7 +39,7 @@ export function insertItem(progression, itemToSkip) {
   result = progression.join(' ');
   return result;
 }
-export function testPrime(num) {
+export function testIsPrime(num) {
   let result = '';
   if (num === 1 || num === 0) return false;
   let i = 0;
@@ -51,7 +51,7 @@ export function testPrime(num) {
   result = splitter < 3;
   return result;
 }
-export function getGCD(numOne, numTwo) {
+export function getMyGCD(numOne, numTwo) {
   let i = 0;
   let isNodeBoth = 0;
   const smallestOne = numOne < numTwo ? numOne : numTwo;
