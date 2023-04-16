@@ -47,14 +47,3 @@ export function testIsPrime(num) {
   result = splitter < 3;
   return result;
 }
-export function getMyGCD(numOne, numTwo) {
-  let i = 0;
-  let isNodeBoth = 0;
-  const smallestOne = numOne < numTwo ? numOne : numTwo;
-  for (i = 0; i <= smallestOne; i += 1) {
-    if (numOne % i === 0 && numTwo % i === 0) {
-      isNodeBoth = i;
-    }
-  }
-  return isNodeBoth;
-}

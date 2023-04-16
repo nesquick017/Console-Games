@@ -1,22 +1,22 @@
-// import { getName } from '../src/cli.js';
-// import { compareAnswer, NOD, getAllert, questionAnswer } from '../src/index.js';
+import { getRandomMath } from '../utils.js';
 
-// let i = 0;
-// let gamerName = '';
-// let correctRound = 0;
+export const explanationToGCD = 'Find the greatest common divisor of given numbers.';
 
-// console.log('Welcome to the Brain Games!');
-// gamerName = getName();
-// console.log('Find the greatest common divisor of given numbers.');
-// for (i = 0; i < 3; i += 1) {
-//   const numberOne = Math.floor(Math.random() * 100);
-//   const numberTwo = Math.floor(Math.random() * 100);
-//   const question = `${numberOne} ${numberTwo}`;
-//   const correctAnswer = NOD(numberOne, numberTwo);
-//   const gamerAnswer = questionAnswer(question);
-//   const allertToGamer = getAllert(gamerAnswer, gamerName, correctAnswer);
-//   const result = compareAnswer(correctAnswer, gamerAnswer, allertToGamer);
-//   if (!result) break;
-//   correctRound += 1;
-// }
-// if (correctRound === 3) console.log(`${'Congratulations,'} ${gamerName}${'!'}`);
+function getMyGCD(numOne, numTwo) {
+  let i = 0;
+  let isNodeBoth = 0;
+  const smallestOne = numOne < numTwo ? numOne : numTwo;
+  for (i = 0; i <= smallestOne; i += 1) {
+    if (numOne % i === 0 && numTwo % i === 0) {
+      isNodeBoth = i;
+    }
+  }
+  return isNodeBoth;
+}
+export function GCD() {
+  const myNum1 = getRandomMath(1, 100);
+  const myNum2 = getRandomMath(1, 100);
+  const question = `${myNum1} ${myNum2}`;
+  const correctAnswer = `${getMyGCD(myNum1, myNum2)}`;
+  return [question, correctAnswer];
+}
