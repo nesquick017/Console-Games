@@ -15,8 +15,7 @@ function testIsPrime(num) {
 
 export const explanationToPrime = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 export function brainPrime() {
-  const myNum = getRandomMath(0, 1000);
-  const question = myNum;
-  const correctAnswer = testIsPrime(myNum) ? 'yes' : 'no';
+  const question = getRandomMath(0, 1000);
+  const correctAnswer = testIsPrime(question) ? 'yes' : 'no';
   return [question, correctAnswer];
 }

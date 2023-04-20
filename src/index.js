@@ -1,5 +1,4 @@
 import readlineSync from 'readline-sync';
-import getName from './cli.js';
 
 export function giveQuestion(questionToGamer) {
   console.log('Question:', questionToGamer);
@@ -18,20 +17,19 @@ export function getAllert(gamerAnswer, gamerName, correctAnswer) {
 }
 export function playGame(gameNameFunc, explanationToGame) {
   console.log('Welcome to the Brain Games!');
-  const gamerName = getName();
+  const gamerName = readlineSync.question('May I have your name ? : ');
+  console.log('Hello,', gamerName);
   console.log(explanationToGame);
-  let i = 0;
-  for (i = 0; i < 3; i += 1) {
+  for (let i = 0; i < 3; i += 1) {
     const [questionToGamer, correctAnswer] = gameNameFunc();
     giveQuestion(questionToGamer);
-    const gamerAnswer = getAnswer();
-    const isCorrect = makeCompare(gamerAnswer, correctAnswer);
-    const allert = getAllert(gamerAnswer, gamerName, correctAnswer);
-    if (!isCorrect) {
-      console.log(allert);
-      break;
+    const gamerAnswer = readlineSync.question('Your answer: ');
+    const isCorrect = gamerAnswer === correctAnswer;
+    if (isCorrect === false) {
+      const alert = `'${gamerAnswer}' is a wrong answer ;(. Correct answer was '${correctAnswer}'\nLet's try again, ${gamerName}!`;
+      return console.log(alert);
     }
     console.log('Correct!');
-    if (i === 2) console.log(`Congratulations, ${gamerName}!`);
   }
+  return console.log(`Congratulations, ${gamerName}!`);
 }

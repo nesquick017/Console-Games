@@ -6,8 +6,7 @@ function testIsEven(num) {
   return result;
 }
 export function brainEven() {
-  const myNum = getRandomMath(0, 100);
-  const question = myNum;
-  const correctAnswer = testIsEven(myNum) ? 'yes' : 'no';
+  const question = getRandomMath(0, 100);
+  const correctAnswer = testIsEven(question) ? 'yes' : 'no';
   return [question, correctAnswer];
 }
