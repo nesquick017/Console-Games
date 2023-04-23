@@ -18,9 +18,11 @@ function doCalc(a, operation, b) {
     case '+':
       result = a + b;
       break;
-    default:
+    case '*':
       result = a * b;
       break;
+    default:
+      return null;
   }
   return result;
 }
