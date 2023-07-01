@@ -21,4 +21,4 @@ Step 2: Review the game descriptions below and choose which one you want to play
 Thank you, and I hope you'll have a good time!
 Below are a few Hexlet tests, linter status, and maintainability rate.
 
-[![Actions Status](https://github.com/nesquick017/frontend-project-44/workflows/hexlet-check/badge.svg)](https://github.com/nesquick017/frontend-project-44/actions) | <a href="https://codeclimate.com/github/nesquick017/frontend-project-44/maintainability"><img src="https://api.codeclimate.com/v1/badges/8a70e8731d875bca351f/maintainability" /></a>
+[![Actions Status](https://github.com/nesquick017/frontend-project-44/workflows/hexlet-check/badge.svg)](https://github.com/nesquick017/frontend-project-44/actions) <a href="https://codeclimate.com/github/nesquick017/frontend-project-44/maintainability"><img src="https://api.codeclimate.com/v1/badges/8a70e8731d875bca351f/maintainability" /></a>
