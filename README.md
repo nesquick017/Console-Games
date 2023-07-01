@@ -9,10 +9,10 @@ npm install @hexlet/code@1.0.0
 Step 2: Review the game descriptions below and choose which one you want to play.\
 Step 3: Enter the chosen name in the terminal and enjoy!
 
--Game 1: brain-calc - Find the solution for the given expression.
--Game 2: brain-even - Answer 'yes' if the given number is even, 'no' if it's not. Please answer strictly, as this is crucial.
--Game 3: brain-gcd - Find the greatest common divisor of the given numbers. Enter the correct number as your answer.
--Game 4: brain-prime - Answer 'yes' if the given number is prime, 'no' if it's not. Please answer strictly, as this is crucial.
+-Game 1: brain-calc - Find the solution for the given expression.\
+-Game 2: brain-even - Answer 'yes' if the given number is even, 'no' if it's not. Please answer strictly, as this is crucial.\
+-Game 3: brain-gcd - Find the greatest common divisor of the given numbers. Enter the correct number as your answer.\
+-Game 4: brain-prime - Answer 'yes' if the given number is prime, 'no' if it's not. Please answer strictly, as this is crucial.\
 -Game 5: brain-progression - Find out the missing number in the progression.
 
 ## Video Demonstrations:
