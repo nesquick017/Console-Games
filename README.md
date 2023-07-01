@@ -6,7 +6,7 @@ Step 1: Install the package using:
 ```
 npm install @hexlet/code@1.0.0
 ```
-Step 2: Review the game descriptions below and choose which one you want to play. 
+Step 2: Review the game descriptions below and choose which one you want to play.\
 Then, enter the chosen name in the terminal and enjoy!
 
 **Game 1: brain-calc** - Find the solution for the given expression.
@@ -16,7 +16,6 @@ Then, enter the chosen name in the terminal and enjoy!
 **Game 5: brain-progression** - Find out the missing number in the progression.
 
 ## Video Demonstrations:
----
 - [Brain-calc demo](https://asciinema.org/a/k1KJssLJ6gaLunLSx9USqmZw0)
 - [Brain-even demo](https://asciinema.org/a/FIGgutqjJstYtzPNWTKVM39nf)
 - [Brain-gcd demo](https://asciinema.org/a/ltpxGYKMCU3EIXOhPnJqDXFhk)
