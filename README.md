@@ -12,11 +12,11 @@ Step 2: Review the game descriptions below and choose which one you want to play
 **Game 5: brain-progression** - Find out the missing number in the progression.
 
 ## Video Demonstrations:
-- [Brain-calc demo]([video link](https://asciinema.org/a/k1KJssLJ6gaLunLSx9USqmZw0))
-- [Brain-even demo]([video link](https://asciinema.org/a/FIGgutqjJstYtzPNWTKVM39nf))
-- [Brain-gcd demo]([video link](https://asciinema.org/a/ltpxGYKMCU3EIXOhPnJqDXFhk))
-- [Brain-prime demo]([video link](https://asciinema.org/a/1YegTGwtpNsSSsW66ev8cYWrn))
-- [Brain-progression demo]([video link](https://asciinema.org/a/uIcemSafLMU6mueXuIFtTmJ5i))
+- [Brain-calc demo](https://asciinema.org/a/k1KJssLJ6gaLunLSx9USqmZw0)
+- [Brain-even demo](https://asciinema.org/a/FIGgutqjJstYtzPNWTKVM39nf)
+- [Brain-gcd demo](https://asciinema.org/a/ltpxGYKMCU3EIXOhPnJqDXFhk)
+- [Brain-prime demo](https://asciinema.org/a/1YegTGwtpNsSSsW66ev8cYWrn)
+- [Brain-progression demo](https://asciinema.org/a/uIcemSafLMU6mueXuIFtTmJ5i)
 
 Thank you, and I hope you'll have a good time!
 Below are a few Hexlet tests, linter status, and maintainability rate.
