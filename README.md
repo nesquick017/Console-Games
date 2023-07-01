@@ -7,7 +7,7 @@ Step 1: Install the package using:
 npm install @hexlet/code@1.0.0
 ```
 Step 2: Review the game descriptions below and choose which one you want to play.\
-Then, enter the chosen name in the terminal and enjoy!
+Step 3: Enter the chosen name in the terminal and enjoy!
 
 **Game 1: brain-calc** - Find the solution for the given expression.
 **Game 2: brain-even** - Answer 'yes' if the given number is even, 'no' if it's not. Please answer strictly, as this is crucial.
